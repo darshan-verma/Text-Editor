@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { FolderPlus, FileText, ChevronRight, FilePlus, Trash2, Edit2 } from 'lucide-react';
+import { FolderPlus, FileText, ChevronRight, FilePlus, Trash2, Edit2, ChevronLeft } from 'lucide-react';
 import { createFolder, createFile, selectFile, deleteFile, deleteFolder, updateFolderName } from '../store/fileExplorerSlice';
 import { RootState } from '../store/store';
 
@@ -254,7 +254,7 @@ const Sidebar: React.FC = () => {
                                         </button>
                                     </div>
                                 ))}
-                            {/* Root Folders */}
+                           
                             {rootFolders.map(folder => renderFolder(folder))}
                         </>
                     )}
@@ -266,7 +266,7 @@ const Sidebar: React.FC = () => {
                         onClick={() => setIsExpanded(false)}
                         className="w-full py-1 px-2 text-sm text-gray-600 hover:bg-gray-200 rounded-md transition-colors flex items-center justify-center"
                     >
-                        <ChevronRight className="w-4 h-4 mr-1" />
+                        <ChevronLeft className="w-4 h-4 mr-1" />
                         Collapse
                     </button>
                 </div>

@@ -12,7 +12,7 @@ const Editor = () => {
 
     return (
         <div className="h-screen flex overflow-hidden">
-            {/* Mobile Sidebar Toggle */}
+            {/* Mobile Sidebar */}
             <button
                 onClick={toggleSidebar}
                 className="lg:hidden fixed z-50 bottom-4 right-4 p-2 bg-blue-500 text-white rounded-full shadow-lg"
@@ -34,7 +34,7 @@ const Editor = () => {
                 <EditorPane />
             </div>
 
-            {/* Overlay for mobile when sidebar is open */}
+           
             {isSidebarOpen && (
                 <div
                     className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30"

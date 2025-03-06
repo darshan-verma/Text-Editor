@@ -10,8 +10,8 @@ const TextEditor: React.FC = () => {
     const files = useSelector((state: RootState) => state.fileExplorer.files);
     const [isEditingName, setIsEditingName] = useState(false);
     const [editedName, setEditedName] = useState('');
+
     
-    // If no file is selected, show placeholder
     if (!selectedFileId) {
         return (
             <div className="h-full flex items-center justify-center text-gray-500">
@@ -20,7 +20,7 @@ const TextEditor: React.FC = () => {
         );
     }
 
-    // If file doesn't exist, show error
+   
     const file = files[selectedFileId];
     if (!file) {
         return (

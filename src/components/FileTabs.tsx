@@ -31,14 +31,14 @@ const FileTabs: React.FC = () => {
 
     if (openFiles.length === 0) {
         return (
-            <div className="h-12 border-b border-gray-200 bg-gray-50 flex items-center pl-12 pr-4">
+            <div className="h-12 border-b border-gray-200 bg-gray-50 flex items-center px-4">
                 <span className="text-gray-500 text-sm">No files open</span>
             </div>
         );
     }
 
     return (
-        <div className="h-12 flex border-b border-gray-200 bg-gray-50 overflow-x-auto pl-12 pr-4">
+        <div className="h-12 flex border-b border-gray-200 bg-gray-50 overflow-x-auto">
             {openFiles.map((file: OpenFile) => (
                 <div
                     key={file.id}
